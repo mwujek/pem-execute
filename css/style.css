@@ -19,6 +19,9 @@ html {
   margin: 0;
   padding: 0; }
 
+body {
+  overflow: hidden; }
+
 @media (min-width: 800px) {
   .row {
     width: 100%;
@@ -27,10 +30,35 @@ html {
 
   .col {
     display: table-cell; } }
-.row-2-mobile {
-  width: 100%;
-  display: table;
-  table-layout: fixed; }
+section.artboard {
+  width: 1400px;
+  height: 700px;
+  margin: 20px auto; }
 
-.col-2-mobile {
-  display: table-cell; }
+img {
+  transition: height 0.3s; }
+
+.collapse-content {
+  height: 118px;
+  min-width: 90%; }
+
+.hide-section {
+  height: 0; }
+
+.table-header {
+  margin-bottom: 0; }
+
+.row-container {
+  overflow: scroll;
+  height: 400px; }
+  .row-container div {
+    margin: 0; }
+  .row-container img {
+    max-width: 100%;
+    margin: 0;
+    margin-top: -3px;
+    border-bottom: 1px solid #E6E6E6; }
+
+.cluster-container {
+  transition: 0.2s height;
+  overflow: hidden; }

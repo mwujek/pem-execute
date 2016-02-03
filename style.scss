@@ -45,10 +45,8 @@ $grey-200: #A4A3A2;
 $grey-100: #C9C9C7;
 $grey-000: #EFEFED;
 
-
-
+// body defaults
 body {
-    
     -moz-font-feature-settings: "lnum";
     -ms-font-feature-settings: "lnum";
     -o-font-feature-settings: "lnum";
@@ -61,10 +59,6 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
-    //background-color: $aqua-200;
-
-
-
 }
 
 body,
@@ -72,6 +66,9 @@ html {
     height: 100%;
     margin:0;
     padding: 0;
+}
+body{
+  overflow: hidden;
 }
 
 
@@ -81,5 +78,43 @@ html {
     .col { display: table-cell; }
 }
 
-.row-2-mobile { width: 100%; display: table; table-layout: fixed; }
-.col-2-mobile { display: table-cell; }
+section.artboard{
+  width: 1400px;
+  height:700px;
+  //outline: 1px solid #cc c;
+  margin: 20px auto;
+}
+
+img{
+  transition: height 0.3s;
+}
+
+.collapse-content{
+  height: 118px;
+  min-width: 90%;
+}
+.hide-section{
+  height: 0;
+}
+
+.table-header{
+  margin-bottom: 0;
+}
+.row-container{
+  overflow: scroll; 
+  height: 400px;
+  div{
+    margin: 0;
+  }
+  img{
+    max-width: 100%;
+    margin:0;
+    margin-top: -3px;
+    border-bottom: 1px solid #E6E6E6;
+  }
+}
+
+.cluster-container{
+  transition:0.2s height;
+  overflow: hidden;
+}
