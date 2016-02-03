@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700|Roboto+Condensed:400,300,700);
+body {
+  -moz-font-feature-settings: "lnum";
+  -ms-font-feature-settings: "lnum";
+  -o-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+  font-feature-settings: "lnum";
+  margin: 0px;
+  padding: 0px;
+  font-family: 'roboto';
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+@media (min-width: 800px) {
+  .row {
+    width: 100%;
+    display: table;
+    table-layout: fixed; }
+
+  .col {
+    display: table-cell; } }
+.row-2-mobile {
+  width: 100%;
+  display: table;
+  table-layout: fixed; }
+
+.col-2-mobile {
+  display: table-cell; }
