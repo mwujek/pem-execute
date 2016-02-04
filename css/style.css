@@ -60,7 +60,7 @@ img {
 
 .table-container {
   width: 1700px;
-  height: 400px;
+  height: 940px;
   margin-top: 32px; }
 
 .row-container div {
@@ -70,7 +70,7 @@ img {
   margin-top: -3px;
   border-bottom: 1px solid #E6E6E6; }
 
-.cluster-container {
+.cluster-container, .item-container {
   overflow: hidden; }
 
 .over-all {
@@ -124,4 +124,4 @@ img {
   .event-container .toggle-items {
     left: 968px; }
   .event-container .toggle-clusters {
-    left: 1300px; }
+    left: 1342px; }
