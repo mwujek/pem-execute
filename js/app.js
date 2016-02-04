@@ -30,20 +30,27 @@ $(document).ready(function(){
       
       // add event header
       eventContainer.append('<img src="' + eventFileName + '">');
+      // add btns
 
-      // add item rows
-      for (var j = 0; j < itemCount; j++) {
-        var randNum2 = Math.floor(Math.random() * 10);
-        var itemFileName = "img/items/i-" + randNum2 + ".png";
-        itemContainer.append('<img src="' + itemFileName + '">');
-      } // end item loop
+      eventContainer.append('<span type="vehicles" class="view-modal-btn vehicle-btn">View All</span>'); // vehicles
+      //eventContainer.append('<span type="clusters" class="view-modal-btn clusters-btn">Show Clusters</span>');
+      eventContainer.append('<i class="icon ion-android-add-circle toggle-items"></i>');
+      eventContainer.append('<i class="icon ion-android-add-circle toggle-clusters"></i>');
+      
 
-      // add cluster rows
-      for (var k = 0; k < clusterCount; k++) {
-        var randNum3 = Math.floor(Math.random() * 10);
-        var clusterFileName = "img/clusters/c-" + randNum3 + ".png";
-        clusterContainer.append('<img src="' + clusterFileName + '">');
-      } // end cluster loop
+      // // add item rows
+      // for (var j = 0; j < itemCount; j++) {
+      //   var randNum2 = Math.floor(Math.random() * 10);
+      //   var itemFileName = "img/items/i-" + randNum2 + ".png";
+      //   itemContainer.append('<img src="' + itemFileName + '">');
+      // } // end item loop
+
+      // // add cluster rows
+      // for (var k = 0; k < clusterCount; k++) {
+      //   var randNum3 = Math.floor(Math.random() * 10);
+      //   var clusterFileName = "img/clusters/c-" + randNum3 + ".png";
+      //   clusterContainer.append('<img src="' + clusterFileName + '">');
+      // } // end cluster loop
 
 
     } // end of loop
@@ -53,6 +60,27 @@ $(document).ready(function(){
 
   $('.toggle-clusters').click(function() {
     $('.table-container').find('.cluster-container').toggleClass('hide-section');
-    console.log('switch');
   });
+
+  // scroll function
+  $('.table-wrapper').on('scroll',function(event){
+    var val =event.target.scrollLeft;
+    $('img.table-header').css('left', (val * -1) + 'px');
+    
+  });
+
+  // click modal btn
+  $('.row-container').delegate('.view-modal-btn', 'click', function() {
+    var type = $(this).attr('type');
+    if (type === "vehicles"){
+      window.alert("Opens modal that shows all " + type);
+    }
+  });
+
+  // click to expand selection
+  $('.row-container').delegate('.ion-android-add-circle', 'click', function() {
+    $(this).toggleClass('showing-children');
+  });
+
+  
 });

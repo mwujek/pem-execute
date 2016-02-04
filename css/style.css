@@ -46,19 +46,82 @@ img {
   height: 0; }
 
 .table-header {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
 
-.row-container {
-  overflow: scroll;
-  height: 400px; }
-  .row-container div {
-    margin: 0; }
-  .row-container img {
-    max-width: 100%;
-    margin: 0;
-    margin-top: -3px;
-    border-bottom: 1px solid #E6E6E6; }
+.table-wrapper {
+  position: relative;
+  width: 1400px;
+  overflow: scroll; }
+  .table-wrapper img {
+    width: 1700px; }
+
+.table-container {
+  width: 1700px;
+  height: 400px;
+  margin-top: 32px; }
+
+.row-container div {
+  margin: 0; }
+.row-container img {
+  margin: 0;
+  margin-top: -3px;
+  border-bottom: 1px solid #E6E6E6; }
 
 .cluster-container {
-  transition: 0.2s height;
   overflow: hidden; }
+
+.over-all {
+  position: relative;
+  overflow: hidden; }
+  .over-all img.table-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99999; }
+
+.event-container {
+  position: relative; }
+  .event-container .view-modal-btn {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #B1E5FD;
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: 'Roboto Condensed';
+    display: inline-block;
+    transition: background 0.15s;
+    cursor: pointer; }
+    .event-container .view-modal-btn:hover {
+      background: #00A7F7; }
+  .event-container .vehicle-btn {
+    top: 1px;
+    left: 364px; }
+  .event-container .clusters-btn {
+    top: 1px;
+    left: 1130px; }
+  .event-container .ion-android-add-circle {
+    position: absolute;
+    top: 1px;
+    font-size: 18px;
+    color: #B1E5FD;
+    transition: color 0.15s, transform 0.2s;
+    transform: rotate(0deg);
+    cursor: pointer; }
+    .event-container .ion-android-add-circle:hover {
+      color: #00A7F7; }
+  .event-container .ion-android-add-circle.showing-children {
+    transform: rotate(45deg);
+    color: #E77271; }
+    .event-container .ion-android-add-circle.showing-children:hover {
+      color: #F7402D; }
+  .event-container .toggle-items {
+    left: 968px; }
+  .event-container .toggle-clusters {
+    left: 1300px; }
