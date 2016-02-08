@@ -1,0 +1,220 @@
+
+
+// fonts, roboto
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700|Roboto+Condensed:400,300,700);
+
+
+// colors
+$blue-black: #003F74;
+$blue-500: #00559D;
+$blue-400: #0086D4;
+$blue-300: #00A7F7;
+$blue-200: #7DD3FC;
+$blue-100: #B1E5FD;
+$blue-000: #E0F5FF;
+
+$green-black: #033F24;
+$green-500: #025932;
+$green-400: #01834B;
+$green-300: #00AD63;
+$green-200: #4CC27D;
+$green-100: #92D6AE;
+$green-000: #C5E3D2;
+
+$orange-black: #7B2B00;
+$orange-500:#B64000;
+$orange-400:#DC6300;
+$orange-300:#F77C00;
+$orange-200:#FF9901;
+$orange-100:#FFCD7A;
+$orange-000: #FFF3DF;
+
+$red-black: #8B0600;
+$red-500: #B2130C;
+$red-400: #D52C28;
+$red-300: #F7402D;
+$red-200: #E77271;
+$red-100: #F19999;
+$red-000: #FFEBEE;
+
+$grey-black: #222;
+$grey-500: #333131;
+$grey-400: #595757; 
+$grey-300: #7E7D7C;
+$grey-200: #A4A3A2;
+$grey-100: #C9C9C7;
+$grey-000: #EFEFED;
+
+// body defaults
+
+body {
+    -moz-font-feature-settings: "lnum";
+    -ms-font-feature-settings: "lnum";
+    -o-font-feature-settings: "lnum";
+    -webkit-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
+    margin:0px;
+    padding:0px;
+    font-family: 'roboto';
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+body,
+html {
+    height: 100%;
+    margin:0;
+    padding: 0;
+}
+
+body{
+  overflow: hidden;
+}
+
+
+body{
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+// ungrid 
+@media (min-width: 800px) {
+    .row { width: 100%; display: table; table-layout: fixed; }
+    .col { display: table-cell; }
+}
+
+section.artboard{
+  width: 1400px;
+  height:700px;
+  //outline: 1px solid #cc c;
+  margin: 20px auto;
+}
+
+img{
+  transition: height 0.3s;
+}
+
+.collapse-content{
+  height: 118px;
+  min-width: 90%;
+}
+.hide-section{
+  height: 0;
+}
+
+.table-header{
+  margin-bottom: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.table-wrapper{
+  position: relative;
+  width: 1400px;
+  overflow: scroll; 
+  img{
+    width: 1900px;
+  }
+}
+.table-container{
+  width: 1900px;
+  height: calc( 100vh - 385px);
+  margin-top: 29px;
+   
+}
+.row-container{
+  //height: 400px;
+  div{
+    margin: 0;
+  }
+  img{
+    margin:0;
+    margin-bottom: -4px;
+    border-bottom: 1px solid #E6E6E6;
+  }
+}
+
+.cluster-container, .item-container{
+  overflow: hidden;
+}
+
+.item-container{
+  background: #eee;
+}
+.cluster-container{
+ background: #FFF3DF; 
+}
+
+
+.over-all{
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #AAA;
+  img.table-header{
+    position: absolute;
+    top:0px;
+    left: 0px; 
+    z-index: 99999;
+  }
+}
+
+
+// rows
+.event-container{
+  position: relative;
+  .view-modal-btn{
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: $blue-100;
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: 'Roboto Condensed';
+    display: inline-block;
+    transition: background 0.15s;
+    cursor: pointer;
+    &:hover{
+      background: $blue-300;
+    }
+  }
+  .vehicle-btn{
+    top: 5px;
+    left: 364px;
+  }
+  .clusters-btn{
+    top: 1px;
+    left: 1193px;
+  }
+
+  .ion-android-add-circle{
+    position: absolute;
+    top: 5px;
+    font-size: 18px;
+    color: $blue-100;
+    transition: color 0.15s, transform 0.2s;
+    transform:rotate(0deg);
+    cursor: pointer;
+    &:hover{
+      color: $blue-300;
+    }
+  }
+  .ion-android-add-circle.showing-children{
+    transform:rotate(45deg);
+    color: $red-200;
+    &:hover{ color: $red-300; }
+  }
+
+  .toggle-items{
+    left:968px;
+  }
+  .toggle-clusters{
+    left:1193px;
+  }
+}

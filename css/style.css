@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700|Roboto+Condensed:400,300,700);
+body {
+  -moz-font-feature-settings: "lnum";
+  -ms-font-feature-settings: "lnum";
+  -o-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+  font-feature-settings: "lnum";
+  margin: 0px;
+  padding: 0px;
+  font-family: 'roboto';
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  overflow: hidden; }
+
+body {
+  user-select: none;
+  -mox-user-select: none;
+  -webkit-user-select: none; }
+
+@media (min-width: 800px) {
+  .row {
+    width: 100%;
+    display: table;
+    table-layout: fixed; }
+
+  .col {
+    display: table-cell; } }
+section.artboard {
+  width: 1400px;
+  height: 700px;
+  margin: 20px auto; }
+
+img {
+  transition: height 0.3s; }
+
+.collapse-content {
+  height: 118px;
+  min-width: 90%; }
+
+.hide-section {
+  height: 0; }
+
+.table-header {
+  margin-bottom: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.table-wrapper {
+  position: relative;
+  width: 1400px;
+  overflow: scroll; }
+  .table-wrapper img {
+    width: 1900px; }
+
+.table-container {
+  width: 1900px;
+  height: calc( 100vh - 385px);
+  margin-top: 29px; }
+
+.row-container div {
+  margin: 0; }
+.row-container img {
+  margin: 0;
+  margin-bottom: -4px;
+  border-bottom: 1px solid #E6E6E6; }
+
+.cluster-container, .item-container {
+  overflow: hidden; }
+
+.item-container {
+  background: #eee; }
+
+.cluster-container {
+  background: #FFF3DF; }
+
+.over-all {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #AAA; }
+  .over-all img.table-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99999; }
+
+.event-container {
+  position: relative; }
+  .event-container .view-modal-btn {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #B1E5FD;
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: 'Roboto Condensed';
+    display: inline-block;
+    transition: background 0.15s;
+    cursor: pointer; }
+    .event-container .view-modal-btn:hover {
+      background: #00A7F7; }
+  .event-container .vehicle-btn {
+    top: 5px;
+    left: 364px; }
+  .event-container .clusters-btn {
+    top: 1px;
+    left: 1193px; }
+  .event-container .ion-android-add-circle {
+    position: absolute;
+    top: 5px;
+    font-size: 18px;
+    color: #B1E5FD;
+    transition: color 0.15s, transform 0.2s;
+    transform: rotate(0deg);
+    cursor: pointer; }
+    .event-container .ion-android-add-circle:hover {
+      color: #00A7F7; }
+  .event-container .ion-android-add-circle.showing-children {
+    transform: rotate(45deg);
+    color: #E77271; }
+    .event-container .ion-android-add-circle.showing-children:hover {
+      color: #F7402D; }
+  .event-container .toggle-items {
+    left: 968px; }
+  .event-container .toggle-clusters {
+    left: 1193px; }
