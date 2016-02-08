@@ -46,6 +46,7 @@ $grey-100: #C9C9C7;
 $grey-000: #EFEFED;
 
 // body defaults
+
 body {
     -moz-font-feature-settings: "lnum";
     -ms-font-feature-settings: "lnum";
@@ -67,10 +68,17 @@ html {
     margin:0;
     padding: 0;
 }
+
 body{
   overflow: hidden;
 }
 
+
+body{
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
 
 // ungrid 
 @media (min-width: 800px) {
@@ -109,13 +117,13 @@ img{
   width: 1400px;
   overflow: scroll; 
   img{
-    width: 1700px;
+    width: 1900px;
   }
 }
 .table-container{
-  width: 1700px;
-  height: 940px;
-  margin-top: 32px;
+  width: 1900px;
+  height: calc( 100vh - 385px);
+  margin-top: 29px;
    
 }
 .row-container{
@@ -125,7 +133,7 @@ img{
   }
   img{
     margin:0;
-    margin-top: -3px;
+    margin-bottom: -4px;
     border-bottom: 1px solid #E6E6E6;
   }
 }
@@ -134,9 +142,18 @@ img{
   overflow: hidden;
 }
 
+.item-container{
+  background: #eee;
+}
+.cluster-container{
+ background: #FFF3DF; 
+}
+
+
 .over-all{
   position: relative;
   overflow: hidden;
+  border: 1px solid #AAA;
   img.table-header{
     position: absolute;
     top:0px;
@@ -168,17 +185,17 @@ img{
     }
   }
   .vehicle-btn{
-    top: 1px;
+    top: 5px;
     left: 364px;
   }
   .clusters-btn{
     top: 1px;
-    left: 1130px;
+    left: 1193px;
   }
 
   .ion-android-add-circle{
     position: absolute;
-    top: 1px;
+    top: 5px;
     font-size: 18px;
     color: $blue-100;
     transition: color 0.15s, transform 0.2s;
@@ -198,6 +215,6 @@ img{
     left:968px;
   }
   .toggle-clusters{
-    left:1342px;
+    left:1193px;
   }
 }

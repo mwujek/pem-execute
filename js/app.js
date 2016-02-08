@@ -14,7 +14,7 @@ $(document).ready(function(){
 
   function loadTable (){
     var rowContainer = $('.row-container ');
-    var eventCount = 40;
+    var eventCount = 60;
     var itemCount = 15;
     var clusterCount = 12;
 
