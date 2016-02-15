@@ -24,7 +24,7 @@ body {
 
 body {
   user-select: none;
-  -mox-user-select: none;
+  -moz-user-select: none;
   -webkit-user-select: none; }
 
 @media (min-width: 800px) {
@@ -137,3 +137,9 @@ img {
     left: 968px; }
   .event-container .toggle-clusters {
     left: 1193px; }
+
+.toggle-ready {
+  position: absolute;
+  top: 4px;
+  left: -1px;
+  transform: scale(0.8); }

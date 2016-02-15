@@ -36,6 +36,7 @@ $(document).ready(function(){
       //eventContainer.append('<span type="clusters" class="view-modal-btn clusters-btn">Show Clusters</span>');
       eventContainer.append('<i class="icon ion-android-add-circle toggle-items"></i>');
       eventContainer.append('<i class="icon ion-android-add-circle toggle-clusters"></i>');
+      eventContainer.append('<input type="checkbox" class="toggle-ready">');
       
 
       // add item rows
@@ -126,6 +127,25 @@ $(document).ready(function(){
     }
     
     
+  });
+
+  // click on input toggle
+
+  $('.row-container').delegate('.toggle-ready', 'click', function() {
+    var val = $(this).prop( "checked");
+    var others = $(this).parents('.row-container').find('.toggle-ready');
+    others.each(function() {
+      var status = $(this).prop( "checked");
+      console.log(status)
+      if( status === true){
+        nextBtn.addClass('active-btn');
+      } else {
+        nextBtn.removeClass('active-btn');
+      }
+    });
+
+    //console.log(others);
+
   });
   
 });
